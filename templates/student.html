@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>student</title>
+</head>
+<body>
+    <h2>hello student {{name}}</h2>
+    {% if is_topper %}
+        <p>You are topper</p>
+    {% else %}
+        <p>work hard</p>  
+    {% endif %}      
+    <ul>
+        {% for subject in subjects %}
+            <li>{{subject}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

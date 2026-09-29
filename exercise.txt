@@ -1,0 +1,26 @@
+from flask import Flask, request
+app = Flask(__name__)
+
+@app.route("/naina")
+def home():
+    return "Hello Naina.."
+
+@app.route("/submit", methods=["GET", "POST"])
+def submit():
+    if request.method == "POST":
+        return "sent data"
+    else:
+        return "read data"
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My website</title>
+</head>
+<body>
+    <h2>Welcome to home page..</h2>
+    <P>This is a homepage desgined by flask framework.</P>
+</body>
+</html>

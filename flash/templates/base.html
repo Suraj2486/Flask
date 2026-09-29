@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} My form {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>welcome to my page </h1>
+        <nav>
+            <a href="/">Home </a>
+        </nav>
+    </header>
+    {% with msgs = get_flashed_messages() %}
+    {% if msgs %}
+        <ul style="color: gray;">
+            {% for msg in msgs %}
+            <li>{{msg}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %} {% endblock %}
+</body>
+</html>
